@@ -1,6 +1,7 @@
 package com.spring.Spring5work.model;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -23,19 +24,27 @@ public class Book {
 	
 	@ManyToMany
 	@JoinTable(name="author_book", joinColumns= @JoinColumn(name = "book_id"),
-	inverseJoinColumns = @JoinColumn(name="aurhor_id"))
+	inverseJoinColumns = @JoinColumn(name="author_id"))
 	private Set<Author> authors = new HashSet<>();
 	
 	public Book() {
 		
 	}
 
-	public Book(String title, String isbn, String publisher, Set<Author> authors) {
+	public Book(String title, String isbn, String publisher) {
 		
 		this.title = title;
 		this.isbn = isbn;
 		this.publisher = publisher;
-		this.authors = authors;
+		
+	}
+	
+	public void getBookSet() {
+		Iterator iter = authors.iterator();
+		while(iter.hasNext()) {
+			System.out.println(((Author) iter.next()).getFirstName());
+		}
+		
 	}
 	
 	// getters and setters
