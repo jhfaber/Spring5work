@@ -30,6 +30,7 @@ public class Author {
 		this.lastName = lastName;
 		
 	}
+	//line for inherit git
 	
 	
 
