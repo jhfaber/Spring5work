@@ -10,3 +10,9 @@ is a beatifull begin for my experience in development, i want increase my skilll
 # Features
 
 This project just have some features for practice, it just use JPA for create a database in h2 and use some concepts as Controllers, Repositorires, CRUD, views (thymeleaf), i use some console commands for show registers.
+
+Este projecto tiene como resultado base [con un archivo readme](/edit/master/README.md) para la utilización de metodos y escrituras.
+
+
+- Esto es un punto importante
+- Esto es otro punto importante.
