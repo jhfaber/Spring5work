@@ -14,5 +14,12 @@ This project just have some features for practice, it just use JPA for create a 
 Este projecto tiene como resultado base [con un archivo readme](/edit/master/README.md) para la utilización de metodos y escrituras.
 
 
-- Esto es un punto importante
-- Esto es otro punto importante.
+## CDI
+
+Para tendener un poco CDI podemos seguir el siguiente [enlace](http://programandoointentandolo.com/2013/05/inyeccion-de-dependencias-en-spring.html).
+
+Algunos elementos importantes a notar, @Component= bean, @Service, @Repository y @Controller son estereotipos de @Component, mientras que @Autowired corresponde a los atributos que va a tener el bean, puede ser en puesto en un atributo, set o constructor-
+
+- Si tenemos @Qualifier(''), se utiliza para elegir la implementacin de una interfaz, esto es cuando una interfaz tiene 2 o mas implementaciones, entonces elegimos la clase implementada que necesiatmos.
+- No olvidar que con CDI es un contenedor de beans, lo que permite que cada objeto sea inyectado en vez de instanceado (creado) por la misma clase.
+- Al ser un objeto inyectado, tiene por defecto @Scope('Singleton'), solo existe una instancia del objeto, el @Scope se puede cambiar para que tenga otros comportamientos.
